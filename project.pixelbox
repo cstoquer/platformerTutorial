@@ -1,0 +1,84 @@
+{
+	"name": "PlatformerTutorial",
+	"version": "2.0.2",
+	"appid": "XeGjghswqoFbiEa4",
+	"screen": {
+		"fullscreen": false,
+		"resizable": false,
+		"keepAspectRatio": false,
+		"width": 128,
+		"height": 128,
+		"pixelSize": {
+			"width": 4,
+			"height": 4
+		}
+	},
+	"tileSize": {
+		"width": 8,
+		"height": 8
+	},
+	"palette": {
+		"name": "db16",
+		"file": "palette",
+		"colors": [
+			"#140c1c",
+			"#deeed6",
+			"#d2aa99",
+			"#346524",
+			"#4e4a4e",
+			"#757161",
+			"#8595a1",
+			"#6daa2c",
+			"#854c30",
+			"#d04648",
+			"#d27d2c",
+			"#dad45e",
+			"#442434",
+			"#30346d",
+			"#597dce",
+			"#6dc2ca"
+		]
+	},
+	"controls": {
+		"up": 38,
+		"down": 40,
+		"left": 37,
+		"right": 39,
+		"A": 32,
+		"B": 88
+	},
+	"touchEvent": {
+		"multiTouch": false,
+		"disableContextMenu": true,
+		"hideMousePointer": false
+	},
+	"gamepad": {
+		"analogToDpad": true,
+		"deadZone": 0.5
+	},
+	"loader": {
+		"colors": [
+			"#140C1C",
+			"#DEEED6"
+		],
+		"custom": ""
+	},
+	"components": {
+		"pixelboxCore": true,
+		"webGL": false,
+		"miniText": true,
+		"keyboard": true,
+		"gamepad": true,
+		"AudioManager": true,
+		"patatracker": false,
+		"bleeper": true,
+		"TINA": false,
+		"polyfill": false
+	},
+	"buildOptions": {
+		"scriptLanguage": "ES6",
+		"hasAtlas": false,
+		"mangle": [],
+		"globals": {}
+	}
+}

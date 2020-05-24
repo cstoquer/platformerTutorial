@@ -1,0 +1,7 @@
+// module.exports = require('./part1_physic/main')
+// module.exports = require('./part2_debug/main')
+// module.exports = require('./part3_level/main')
+// module.exports = require('./part4_animations/main')
+// module.exports = require('./part5_scenes/main')
+// module.exports = require('./part6_entities/main')
+module.exports = require('./part7_persistency/main')

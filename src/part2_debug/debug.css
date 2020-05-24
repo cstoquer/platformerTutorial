@@ -1,0 +1,27 @@
+.debugPanel {
+	position: absolute;
+	background-color: transparent;
+	padding: 10px;
+	border-radius: 4px;
+	background-color: white;
+	opacity: 0.1;
+	transition: opacity 200ms;
+    font-size: 11px;
+}
+
+.debugPanel:hover {
+	opacity: 0.6;
+}
+
+label {
+    display: inline-block;
+	width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.value {
+    display: inline-block;
+	width: 50px;
+	overflow: hidden;
+}

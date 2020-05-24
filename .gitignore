@@ -1,0 +1,14 @@
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Ignore Mac OS files
+.DS_Store
+
+# Ignore distrib directory
+distrib
+
+# ignore local tool settings
+/tools/settings.json
+/tools/bleeper.json
