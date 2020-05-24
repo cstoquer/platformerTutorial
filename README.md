@@ -3,13 +3,13 @@
 <img width="624" alt="Screen Shot 2020-05-25 at 0 40 59" src="https://user-images.githubusercontent.com/2462139/82758299-aace2480-9e20-11ea-8400-22a562412b9e.png">
 
 This tutorial is separated into 7 parts:
-- Physic and character movements
-- Project structure and debug panel
-- Level collision
-- Animations and polish
-- Separate game into scenes
-- Entity manager: adding items and ennemies
-- Level building and persistency
+- [Physic and character movements](https://github.com/cstoquer/platformerTutorial/tree/master/src/part1_physic)
+- [Project structure and debug panel](https://github.com/cstoquer/platformerTutorial/tree/master/src/part2_debug)
+- [Level collision](https://github.com/cstoquer/platformerTutorial/tree/master/src/part3_level)
+- [Animations and polish](https://github.com/cstoquer/platformerTutorial/tree/master/src/part4_animations)
+- [Separate game into scenes](https://github.com/cstoquer/platformerTutorial/tree/master/src/part5_scenes)
+- [Entity manager: adding items and ennemies](https://github.com/cstoquer/platformerTutorial/tree/master/src/part6_entities)
+- [Level building and persistency](https://github.com/cstoquer/platformerTutorial/tree/master/src/part7_persistency)
 
 ## Installation
 You need [Pixelbox editor](https://cstoquer.itch.io/pixelbox) to build and run this game.
