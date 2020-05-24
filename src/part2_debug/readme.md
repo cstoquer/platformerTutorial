@@ -1,3 +1,4 @@
+[< return to main page](https://github.com/cstoquer/platformerTutorial)
 # Part 2: Cleanup and debug panel
 In this part we cleanup the project structure by separating the code into several modules:
 - `constants.js` contains the game physic constants

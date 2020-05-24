@@ -1,3 +1,4 @@
+[< return to main page](https://github.com/cstoquer/platformerTutorial)
 # Part 6: Add ennemies and items
 
 In this chapter we will add other entities that can interact with the player character:

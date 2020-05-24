@@ -1,3 +1,4 @@
+[< return to main page](https://github.com/cstoquer/platformerTutorial)
 # Part 4: Animations and polish
 In this chapter, we will make the game looks a bit more like a game, by adding graphics, animations and some sound effects.
 
