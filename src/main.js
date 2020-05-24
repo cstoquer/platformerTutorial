@@ -3,5 +3,5 @@
 // module.exports = require('./part3_level/main')
 // module.exports = require('./part4_animations/main')
 // module.exports = require('./part5_scenes/main')
-// module.exports = require('./part6_entities/main')
-module.exports = require('./part7_persistency/main')
+module.exports = require('./part6_entities/main')
+// module.exports = require('./part7_persistency/main')
