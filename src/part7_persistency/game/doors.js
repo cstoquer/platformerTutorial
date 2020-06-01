@@ -8,7 +8,10 @@ function addLink(levelA, doorA, levelB, doorB) {
 }
 
 addLink('level1', 1, 'level2', 1)
-addLink('level1', 2, 'level2', 2)
+addLink('level2', 2, 'level3', 1)
+addLink('level3', 2, 'level2', 3)
+addLink('level2', 4, 'level1', 2)
+addLink('level3', 3, 'level4', 1)
 
 
 export function getDestination(level, door) {

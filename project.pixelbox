@@ -3,9 +3,9 @@
 	"version": "2.0.2",
 	"appid": "XeGjghswqoFbiEa4",
 	"screen": {
-		"fullscreen": false,
-		"resizable": false,
-		"keepAspectRatio": false,
+		"fullscreen": true,
+		"resizable": true,
+		"keepAspectRatio": true,
 		"width": 128,
 		"height": 128,
 		"pixelSize": {
