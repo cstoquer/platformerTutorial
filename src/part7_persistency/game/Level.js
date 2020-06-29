@@ -83,7 +83,7 @@ export default class Level {
 
 	createEntities(map) {
 		for (let sprite in ENTITY_TYPE_BY_SPRITE) {
-			const entities = map.find(~~sprite)
+			const entities = map.find(parseInt(sprite))
 			if (!entities.length) continue
 
 			const EntityClass = ENTITY_TYPE_BY_SPRITE[sprite]
@@ -99,8 +99,8 @@ export default class Level {
 	}
 
 	getTileAt(x, y) {
-		x = ~~(x / TILE_WIDTH)
-		y = ~~(y / TILE_HEIGHT)
+		x = Math.floor(x / TILE_WIDTH)
+		y = Math.floor(y / TILE_HEIGHT)
 
 		x = clamp(x, 0, this.logic.width  - 1)
 		y = clamp(y, 0, this.logic.height - 1)

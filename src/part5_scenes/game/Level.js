@@ -35,8 +35,8 @@ export default class Level {
 	}
 
 	getTileAt(x, y) {
-		x = ~~(x / TILE_WIDTH)
-		y = ~~(y / TILE_HEIGHT)
+		x = Math.floor(x / TILE_WIDTH)
+		y = Math.floor(y / TILE_HEIGHT)
 
 		x = clamp(x, 0, this.logic.width  - 1)
 		y = clamp(y, 0, this.logic.height - 1)
