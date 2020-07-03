@@ -1,4 +1,4 @@
-[< return to main page](https://github.com/cstoquer/platformerTutorial)
+[< return to main page](https://github.com/cstoquer/platformerTutorial) | [< prev](https://github.com/cstoquer/platformerTutorial/tree/master/src/part2_debug) | [next >](https://github.com/cstoquer/platformerTutorial/tree/master/src/part4_animations)
 # Part 3: Level collisions
 
 In this part, we will implement collision between player character and tiles.

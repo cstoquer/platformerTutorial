@@ -1,4 +1,4 @@
-[< return to main page](https://github.com/cstoquer/platformerTutorial)
+[< return to main page](https://github.com/cstoquer/platformerTutorial) | [next >](https://github.com/cstoquer/platformerTutorial/tree/master/src/part2_debug)
 # Part 1: Basic physic
 
 This part implement simple physic for the player's character movements:
