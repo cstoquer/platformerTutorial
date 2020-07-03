@@ -5,10 +5,7 @@ In this chapter, we will make the game looks a bit more like a game, by adding g
 
 Compared to the previous chapter, only [`game.js`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/game.js), [`Level.js`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Level.js) and [`Player.js`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js) has been modifed.
 
-## Make the camera follow the player
-
-
-## Level
+## Adding graphics to the level design
 To make levels more beautifull without adding too much complexity, we used a simple trick: we separate level apparence and logic.
 A level is made of two TileMaps:
 - a `background` map that contains the graphics to display on screen
@@ -48,22 +45,41 @@ export default class Level {
 }
 ```
 
-## Player
-We switch the boring white square for player character sprite and give them a proper sprite and animations. We will use sprites `153`, `154`, `155` and `156` from the default spritesheet.
+## Make the camera follow the player
+
+We're making the level bigger, and now it doesn't fit in the screen. So we need something to make it scroll and follow the player. Pixelbox engine provides a function `camera(x, y)` to translate the rendering to a position `(x, y)` in pixels. We use this in the `update` function of `game.js`:
+
+```js
+update: function () {
+	this.player.update()
+
+	cls()
+	camera(
+		clamp(this.player.positionX - 64, 0, this.level.width  - SCREEN_WIDTH),
+		clamp(this.player.positionY - 64, 0, this.level.height - SCREEN_HEIGHT)
+	)
+
+	this.level.render()
+	this.player.render()
+}
+```
+
+## Animate player character
+We change the white square for a proper sprites animations. We will use sprites `153`, `154`, `155` and `156` from the default spritesheet.
 
 ![character sprites](https://user-images.githubusercontent.com/2462139/86437243-099b8d80-bd3f-11ea-941a-d5cb5fcb6478.png)
 
 Here are the modifications made to the code:
 
-- Added a [`facingLeft`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L21) boolean to properly render the character depending on the direction it is facing.
+- Added a [`facingLeft`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L21) boolean to flip the character depending on the direction it is facing.
 - Added [`animFrame`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L22) attribute to control the walking animation
-- The bounding box has been reduced a bit to match the sprites used to render the character: `width` is now 6 pixels.
-- Modified the [`render`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L124-L150) method:
+- The bounding box has been reduced a bit to match the sprites: `width` is now 6 pixels instead of 8.
+- Modified the [`render`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L124-L150) method as follow:
 
 The character has 3 states which renders differently:
 - **jumping**: if the character goes upward (`velocityY < 0`) we use sprite `154` otherwise sprite `155`.
 - **walking**: the character is animated using sprites `154` to `156`.
-- **idle**: the character is on ground and not moving. It is rendered with sprite `153`.
+- **idle**: when the character is not moving, it is rendered with sprite `153`.
 
 ```js
 render() {
@@ -95,6 +111,6 @@ render() {
 }
 ```
 
-## Sounds
+## Adding sound effects
 
 We also added a few `sfx` commands to play sounds when the character walks, jumps and lands. Sounds are made with *Bleeper*. To open Bleeper editor, from the top menu: `View > Bleeper SFX editor`.

@@ -2,8 +2,8 @@
 # Part 6: Add ennemies and items
 
 In this chapter we will add other entities that can interact with the player character:
-- coins that can be collected by the player
-- ennemies
+- coins that can be collected by the player.
+- ennemies that cann attack the player character.
 
 ## Entity manager
 
