@@ -13,6 +13,8 @@ The code dindn't changed much, we just moved the different variables and functio
 
 If you're new to object oriented programming, here is a small explanation about it.
 
+[todo]
+
 Notice how the player's variables became attributes of the `Player` class (for instance: `var positionX` became `this.positionX`)
 
 
