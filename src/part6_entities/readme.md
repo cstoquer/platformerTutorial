@@ -1,4 +1,4 @@
-[< return to main page](https://github.com/cstoquer/platformerTutorial) | [< prev](https://github.com/cstoquer/platformerTutorial/tree/master/src/part3_level) | [next >](https://github.com/cstoquer/platformerTutorial/tree/master/src/part6_entities)
+[< return to main page](https://github.com/cstoquer/platformerTutorial) | [< prev](https://github.com/cstoquer/platformerTutorial/tree/master/src/part5_scenes) | [next >](https://github.com/cstoquer/platformerTutorial/tree/master/src/part7_persistency)
 # Part 6: Add ennemies and items
 
 In this chapter we will add other entities that can interact with the player character:
