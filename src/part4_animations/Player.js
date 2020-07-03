@@ -125,11 +125,13 @@ export default class Player {
 		const x = this.positionX - 1
 		const y = this.positionY
 
+		// jumping
 		if (!this.onGround) {
 			sprite(this.velocityY < 0 ? 154 : 155, x, y, this.facingLeft)
 			return
 		}
 
+		// walking
 		const isWalking = btn.right || btn.left
 
 		if (isWalking) {
@@ -143,6 +145,7 @@ export default class Player {
 			return
 		}
 
+		// idle
 		sprite(153, x, y, this.facingLeft)
 	}
 }

@@ -3,7 +3,10 @@
 
 In this chapter, we will make the game looks a bit more like a game, by adding graphics, animations and some sound effects.
 
-Compared to the previous chapter, only `Level.js` and `Player.js` has been modifed.
+Compared to the previous chapter, only [`game.js`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/game.js), [`Level.js`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Level.js) and [`Player.js`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js) has been modifed.
+
+## Make the camera follow the player
+
 
 ## Level
 To make levels more beautifull without adding too much complexity, we used a simple trick: we separate level apparence and logic.
@@ -22,6 +25,9 @@ export default class Level {
 	constructor() {
 		this.logic      = getMap('part4/logic')
 		this.background = getMap('part4/background')
+
+		this.width  = this.logic.width  * TILE_WIDTH
+		this.height = this.logic.height * TILE_HEIGHT
 	}
 
 	render() {
@@ -45,12 +51,14 @@ export default class Level {
 ## Player
 We switch the boring white square for player character sprite and give them a proper sprite and animations. We will use sprites `153`, `154`, `155` and `156` from the default spritesheet.
 
+![character sprites](https://user-images.githubusercontent.com/2462139/86437243-099b8d80-bd3f-11ea-941a-d5cb5fcb6478.png)
+
 Here are the modifications made to the code:
 
-- Added a `facingLeft` boolean to properly render the character depending on the direction it is facing.
-- Added `animFrame` attribute to control the walking animation
+- Added a [`facingLeft`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L21) boolean to properly render the character depending on the direction it is facing.
+- Added [`animFrame`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L22) attribute to control the walking animation
 - The bounding box has been reduced a bit to match the sprites used to render the character: `width` is now 6 pixels.
-- Modified the `render` method:
+- Modified the [`render`](https://github.com/cstoquer/platformerTutorial/blob/master/src/part4_animations/Player.js#L124-L150) method:
 
 The character has 3 states which renders differently:
 - **jumping**: if the character goes upward (`velocityY < 0`) we use sprite `154` otherwise sprite `155`.
