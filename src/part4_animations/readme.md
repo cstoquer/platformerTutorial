@@ -13,8 +13,7 @@ A level is made of two TileMaps:
 
 By doing this way, we don't have to specify the type for every sprites in the tilesheet. TileMaps can be layered in the editor to make sure that they align correctly: simply drag the map from the *assets* panel, onto the *map* panel as demonstrated in this animation:
 
-
-[todo]
+![mapLayers](https://user-images.githubusercontent.com/2462139/86436473-4b2b3900-bd3d-11ea-8de4-fb13642d8a9a.gif)
 
 Modifications made to the `Level.js` code are straightforward:
 
